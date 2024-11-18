@@ -1,0 +1,16 @@
+{
+    "name": "Password Manager Extension",
+    "version": "1.0.0",
+    "description": "Manages your passwords safely",
+    "manifest_version": 3,
+    "default_popup": "passwordManager.html",
+    "author": "Hannah Storer",
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "all_frames": true,
+            "js": ["passwordManager.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
